@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>VERIXA Payment</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet"
+  href="css/payment.css">
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="payment-page">
+
+  <!-- TOP -->
+
+  <div class="top-section">
+
+    <a href="index.html">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+
+    <h2>Vehicle Registration</h2>
+
+  </div>
+
+  <!-- BANK CARD -->
+
+  <div class="bank-card">
+
+    <!-- CARD TOP -->
+
+    <div class="bank-top">
+
+      <div>
+
+        <small>Bank Transfer</small>
+
+        <h1>₦50,000</h1>
+
+      </div>
+
+      <i class="fa-solid fa-building-columns"></i>
+
+    </div>
+
+    <!-- DESCRIPTION -->
+
+    <div class="payment-description">
+
+      <p>
+
+        Payment for:
+        <strong>Car Plate Verification</strong>
+
+        <br><br>
+
+        Transfer the exact amount above.
+
+        <br>
+
+        Verification starts immediately
+        after payment is confirmed.
+
+      </p>
+
+    </div>
+
+    <!-- BANK NAME -->
+
+    <div class="copy-row">
+
+      <div>
+
+        <p>Bank Name</p>
+
+        <h3 id="bankName">
+          OPay Digital Bank
+        </h3>
+
+      </div>
+
+      <button
+      type="button"
+      class="copy-btn"
+      onclick="copyText('bankName',this)">
+
+        <i class="fa-regular fa-copy"></i>
+
+      </button>
+
+    </div>
+
+    <!-- ACCOUNT NUMBER -->
+
+    <div class="copy-row">
+
+      <div>
+
+        <p>Account Number</p>
+
+        <h2 id="accountNumber">
+          8219472810
+        </h2>
+
+      </div>
+
+      <button
+      type="button"
+      class="copy-btn"
+      onclick="copyText('accountNumber',this)">
+
+        <i class="fa-regular fa-copy"></i>
+
+      </button>
+
+    </div>
+
+    <!-- ACCOUNT NAME -->
+
+    <div class="copy-row">
+
+      <div>
+
+        <p>Account Name</p>
+
+        <h3 id="accountName">
+          VERIXA TECHNOLOGIES
+        </h3>
+
+      </div>
+
+      <button
+      type="button"
+      class="copy-btn"
+      onclick="copyText('accountName',this)">
+
+        <i class="fa-regular fa-copy"></i>
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- FORM -->
+
+  <div class="form-section">
+
+    <!-- FULL NAME -->
+
+    <div class="input-group">
+
+      <label for="name">
+        Full Name
+      </label>
+
+      <input
+      type="text"
+      id="name"
+      placeholder="Enter your full name">
+
+    </div>
+
+    <!-- PLATE NUMBER -->
+
+    <div class="input-group">
+
+      <label for="plate">
+        Plate Number
+      </label>
+
+      <input
+      type="text"
+      id="plate"
+      placeholder="Enter plate number">
+
+    </div>
+
+    <!-- EMAIL -->
+
+    <div class="input-group">
+
+      <label for="email">
+        Email Address
+      </label>
+
+      <input
+      type="email"
+      id="email"
+      placeholder="Enter email address">
+
+    </div>
+
+    <!-- ASSOCIATION -->
+
+    <div class="input-group">
+
+      <label for="association">
+        Association
+      </label>
+
+      <input
+      type="text"
+      id="association"
+      placeholder="Enter association">
+
+    </div>
+
+    <!-- RECEIPT -->
+
+    <div class="upload-box">
+
+      <input
+      type="file"
+      id="receipt"
+      accept="image/*"
+      hidden>
+
+      <label for="receipt">
+
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+        <span id="uploadText">
+
+          Upload Payment Receipt
+
+        </span>
+
+      </label>
+
+      <!-- PREVIEW -->
+
+      <img
+      id="receiptPreview"
+      class="receipt-preview"
+      style="display:none;">
+
+    </div>
+
+    <!-- SUBMIT -->
+
+    <button
+    type="button"
+    class="submit-btn"
+    id="submitBtn"
+    onclick="submitPayment()">
+
+      Submit Information
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+
+  <div class="popup-content">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <h2>
+
+      Submitted Successfully
+
+    </h2>
+
+    <p>
+
+      Your registration information
+      has been received successfully.
+
+    </p>
+
+    <button
+    type="button"
+    onclick="closePopup()">
+
+      Continue
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- EMAIL JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- PAYMENT JS -->
+
+<script type="module"
+src="js/payment.js"></script>
+
+</body>
+</html>

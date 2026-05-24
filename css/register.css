@@ -1,0 +1,417 @@
+/* =========================
+   VERIXA REGISTER UI
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+  -webkit-tap-highlight-color:transparent;
+}
+
+body{
+  background:#eef2f7;
+  padding:18px;
+  color:#111827;
+}
+
+/* PAGE */
+
+.register-page{
+  width:100%;
+  max-width:500px;
+  margin:auto;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:22px;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+
+  width:48px;
+
+  height:48px;
+
+  border-radius:16px;
+
+  background:#fff;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-decoration:none;
+
+  box-shadow:
+  0 8px 20px rgba(0,0,0,0.05);
+}
+
+.back-btn i{
+  color:#111827;
+  font-size:18px;
+}
+
+/* TITLE */
+
+.top-bar h2{
+
+  font-size:22px;
+
+  font-weight:900;
+
+  color:#111827;
+}
+
+/* TOP ICON */
+
+.top-icon{
+
+  width:48px;
+
+  height:48px;
+
+  border-radius:16px;
+
+  background:linear-gradient(
+  135deg,
+  #00c6ff,
+  #0072ff
+  );
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  color:#fff;
+
+  box-shadow:
+  0 10px 25px rgba(0,114,255,0.25);
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card{
+
+  position:relative;
+
+  width:100%;
+
+  height:250px;
+
+  border-radius:32px;
+
+  overflow:hidden;
+
+  margin-bottom:24px;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.45),
+  rgba(0,0,0,0.45)),
+
+  url("../image/car1.jpeg");
+
+  background-size:cover;
+
+  background-position:center;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+
+  position:absolute;
+
+  bottom:24px;
+
+  left:22px;
+
+  right:22px;
+
+  z-index:2;
+}
+
+/* BADGE */
+
+.hero-badge{
+
+  display:inline-block;
+
+  padding:7px 15px;
+
+  border-radius:30px;
+
+  background:linear-gradient(
+  135deg,
+  #ffd700,
+  #ffb300
+  );
+
+  color:#111;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  margin-bottom:14px;
+
+  box-shadow:
+  0 0 18px rgba(255,215,0,0.4);
+}
+
+/* HERO TITLE */
+
+.hero-content h1{
+
+  color:#fff;
+
+  font-size:34px;
+
+  line-height:1.1;
+
+  font-weight:900;
+
+  margin-bottom:10px;
+
+  text-shadow:
+  0 3px 10px rgba(0,0,0,0.4);
+}
+
+/* HERO TEXT */
+
+.hero-content p{
+
+  color:#dbe6ff;
+
+  font-size:14px;
+
+  line-height:1.5;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.register-form{
+
+  background:#fff;
+
+  border-radius:32px;
+
+  padding:22px;
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,0.05);
+}
+
+/* INPUT GROUP */
+
+.input-group{
+  margin-bottom:18px;
+}
+
+.input-group label{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  color:#111827;
+}
+
+/* INPUT BOX */
+
+.input-box{
+
+  width:100%;
+
+  height:58px;
+
+  border-radius:20px;
+
+  background:#f5f7fb;
+
+  display:flex;
+
+  align-items:center;
+
+  padding:0 18px;
+
+  gap:12px;
+}
+
+.input-box i{
+
+  color:#0072ff;
+
+  font-size:18px;
+}
+
+/* INPUT */
+
+.input-box input,
+.input-box select{
+
+  flex:1;
+
+  border:none;
+
+  outline:none;
+
+  background:transparent;
+
+  font-size:15px;
+
+  color:#111827;
+}
+
+/* UPLOAD */
+
+.upload-box{
+
+  width:100%;
+
+  height:130px;
+
+  border-radius:28px;
+
+  border:2px dashed #b8c7dd;
+
+  background:#f8fbff;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  margin-top:10px;
+
+  margin-bottom:20px;
+
+  transition:0.25s ease;
+}
+
+.upload-box label{
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  gap:12px;
+
+  cursor:pointer;
+}
+
+.upload-box i{
+
+  font-size:32px;
+
+  color:#0072ff;
+}
+
+.upload-box span{
+
+  font-size:14px;
+
+  font-weight:700;
+
+  color:#4b5563;
+}
+
+/* TERMS */
+
+.terms{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:10px;
+
+  margin-bottom:24px;
+}
+
+.terms input{
+  margin-top:4px;
+}
+
+.terms p{
+
+  font-size:13px;
+
+  color:#6b7280;
+
+  line-height:1.5;
+}
+
+/* BUTTON */
+
+.register-btn{
+
+  width:100%;
+
+  height:60px;
+
+  border:none;
+
+  border-radius:22px;
+
+  background:linear-gradient(
+  135deg,
+  #00c6ff,
+  #0072ff
+  );
+
+  color:#fff;
+
+  font-size:16px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:0.25s ease;
+
+  box-shadow:
+  0 12px 25px rgba(0,114,255,0.28);
+}
+
+/* BUTTON EFFECT */
+
+.register-btn:active{
+
+  transform:scale(1.03);
+
+  box-shadow:
+  0 0 20px rgba(0,198,255,0.45);
+}
